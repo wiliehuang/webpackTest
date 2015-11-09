@@ -1,0 +1,17 @@
+node_modules
+bower_components
+node_modules
+.log
+.tmp
+dump.rdb
+
+*~
+*#
+.DS_STORE
+.netbeans
+.idea
+.node_history
+*.sublime-workspace
+*.bk
+data
+logs
