@@ -1,7 +1,12 @@
 import React from 'react';
 import MessageList from './MessageList.jsx';
+import ChannelList from './ChannelList.jsx';
+import MessageBox from './MessageBox.jsx';
 import mui from 'material-ui';
 import AppBar from 'material-ui/lib/app-bar';
+
+// import Colors from 'material-ui/lib/styles/colors';
+// import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
 // import ThemeManager from 'material-ui/lib/styles/theme-manager';
 // import Colors from 'material-ui/lib/styles/colors';
@@ -21,25 +26,32 @@ class App extends React.Component {
     super();
 
   }
-  //
+
   // static childContextTypes = {
   //   muiTheme: React.PropTypes.object
   // }
   //
   // getChildContext(){
   //   return {
-  //     muiTheme: ThemeManager.getCurrentTheme()
+  //     muiTheme: ThemeManager.getMuiTheme(MyRawTheme)
   //   }
   // }
 
   render(){
     return(
       <div>
-
-        <AppBar
-  title="Title"
-  iconClassNameRight="muidocs-icon-navigation-expand-more" />
+        <AppBar title="Troll Levels" />
+        <div style={{
+            display: 'flex',
+            flexFlow: 'row wrap',
+            maxWidth: 1200,
+            width: '100%',
+            margin: '30px auto 30px'
+          }}>
+        <ChannelList />
         <MessageList />
+        </div>
+        <MessageBox />
     </div>
 
     );
