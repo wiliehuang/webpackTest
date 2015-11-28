@@ -81,8 +81,6 @@ export default class TabsPage extends React.Component {
             <Tab label="Tab Three" value="2" />
           </Tabs>
 
-          <TableContainer />
-
           <SwipeableViews index={this.state.slideIndex} onChangeIndex={this._handleChangeIndex.bind(this)}>
             <div style={styles.slide}>
               <Card style={{
@@ -92,7 +90,8 @@ export default class TabsPage extends React.Component {
                   padding: 30
                 }}>
               <h2 style={styles.headline}>Mercury!1!</h2>
-              
+              <TableContainer />
+
 
             </Card>
 

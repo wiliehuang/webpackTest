@@ -60,22 +60,10 @@ class TableView extends React.Component {
 		  fixedFooter={true}
 		  selectable={true}
 		  multiSelectable={false}>
-		  <TableHeader enableSelectAll={false}>
-		      {this._renderColumnHeaders()}
-		  </TableHeader>
-		  {this._renderBody()}
-		  <TableFooter>
-		    <TableRow>
-		      <TableRowColumn>ID</TableRowColumn>
-		      <TableRowColumn>Name</TableRowColumn>
-		      <TableRowColumn>Status</TableRowColumn>
-		    </TableRow>
-		    <TableRow>
-		      <TableRowColumn colSpan="3" style={{textAlign: 'center'}}>
-		        Super Footer
-		      </TableRowColumn>
-		    </TableRow>
-		  </TableFooter>
+			  <TableHeader enableSelectAll={false}>
+			      {this._renderColumnHeaders()}
+			  </TableHeader>
+			  {this._renderBody()}
 		  </Table>
 	  </div>
     );
