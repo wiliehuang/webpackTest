@@ -9,7 +9,7 @@ import Tab from 'material-ui/lib/tabs/tab';
 import Tabs from 'material-ui/lib/tabs/tabs';
 import InjectTapEvent from 'react-tap-event-plugin';
 import Card from 'material-ui/lib/card/card';
-
+import TableContainer from './TableContainer.jsx';
 
 export default class TabsPage extends React.Component {
 
@@ -74,13 +74,15 @@ export default class TabsPage extends React.Component {
     return (
 
 
-<div>
-
+    <div>
           <Tabs onChange={this._handleChangeTabs.bind(this)} value={this.state.slideIndex + ''}>
             <Tab label="Tab One" value="0" />
             <Tab label="Tab Two" value="1" />
             <Tab label="Tab Three" value="2" />
           </Tabs>
+
+          <TableContainer />
+
           <SwipeableViews index={this.state.slideIndex} onChangeIndex={this._handleChangeIndex.bind(this)}>
             <div style={styles.slide}>
               <Card style={{
@@ -90,9 +92,7 @@ export default class TabsPage extends React.Component {
                   padding: 30
                 }}>
               <h2 style={styles.headline}>Mercury!1!</h2>
-              <p>
-                details
-              </p>
+              
 
             </Card>
 
