@@ -10,6 +10,9 @@ import Tabs from 'material-ui/lib/tabs/tabs';
 import InjectTapEvent from 'react-tap-event-plugin';
 import Card from 'material-ui/lib/card/card';
 import TableContainer from './TableContainer.jsx';
+import Grid from './Grid.jsx';
+import Checkbox from 'material-ui/lib/checkbox';
+import DataPreview from './TableData.jsx';
 
 export default class TabsPage extends React.Component {
 
@@ -76,20 +79,21 @@ export default class TabsPage extends React.Component {
 
     <div>
           <Tabs onChange={this._handleChangeTabs.bind(this)} value={this.state.slideIndex + ''}>
-            <Tab label="Tab One" value="0" />
-            <Tab label="Tab Two" value="1" />
-            <Tab label="Tab Three" value="2" />
+            <Tab label="Flash Update" value="1" />
+            <Tab label="Stats" value="0" />
+            <Tab label="Analysis" value="2" />
           </Tabs>
 
           <SwipeableViews index={this.state.slideIndex} onChangeIndex={this._handleChangeIndex.bind(this)}>
             <div style={styles.slide}>
               <Card style={{
 
-                  maxWidth: 500,
+                  maxWidth: 1280,
                   margin: '30px auto',
                   padding: 30
                 }}>
-              <h2 style={styles.headline}>Mercury!1!</h2>
+              <h2 style={styles.headline}>CFL Stats</h2>
+
               <TableContainer />
 
 
@@ -103,14 +107,18 @@ export default class TabsPage extends React.Component {
                   margin: '30px auto',
                   padding: 30
                 }}>
-              <h2 style={styles.headline}>Mercury!!</h2>
-              <p>
-                details
-              </p>
+                <h2 style={styles.headline}>Game Moments</h2>
 
-            </Card>
+                <Checkbox
+                  name="SubscribeBox"
+                  value="checkboxValue2"
+                  label="Subscribe to Events"
+                  defaultChecked={true}/>
 
-                  <Slider name="slider0" defaultValue={0.5} />
+                <Grid />
+              </Card>
+
+              <Slider name="slider0" defaultValue={0.5} />
 
             </div>
             <div style={styles.slide}>

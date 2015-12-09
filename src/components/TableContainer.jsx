@@ -2,37 +2,24 @@ import TableView from './TableView.jsx';
 import React from 'react';
 
 
+
 class TableContainer extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
   }
 
   render() {
-	var dataset = 
+	var dataset =
 	  	{
 	  		columns: [
-	  			'team',
-	  			'sacks',
-	  			'rushingYards'
+          "details",
+          "down",
+          "game id",
+          "id",
+          "time"
 	  		],
-	  		data: [
-	  			{
-	  				team: 'BC',
-	  				sacks: 10,
-	  				rushingYards: 1750
-	  			},
-	  			{
-	  				team: 'Sask',
-	  				sacks: 30,
-	  				rushingYards: 2500
-	  			},
-	  			{
-	  				team: 'Ottawa',
-	  				sacks: 10,
-	  				rushingYards: 2000
-	  			}  			
-	  		]
+	  		data: CFLData
 	  	};
 
 
