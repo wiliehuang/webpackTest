@@ -7,6 +7,7 @@ import AppBar from 'material-ui/lib/app-bar';
 import BarChart from 'react-d3-components/lib/BarChart';
 import BarChart1 from 'react-d3/barchart/BarChart';
 import Tab from './Tabs.jsx';
+import TableContainer from './TableContainer.jsx';
 
 
 class App extends React.Component {

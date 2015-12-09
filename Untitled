@@ -1,0 +1,35 @@
+<Tabs>
+  <Tab label="Item One" >
+    <div>
+      <h2 style={styles.headline}>Tab One Template Example</h2>
+      <p>
+        This is an example of a tab template!
+      </p>
+      <p>
+        You can put any sort of HTML or react component in here. It even keeps the component state!
+      </p>
+      <Slider name="slider0" defaultValue={0.5} />
+    </div>
+  </Tab>
+  <Tab label="Item Two" >
+    <div>
+      <Card style={{
+          maxWidth: 1200,
+          margin: '30px auto',
+          padding: 30
+        }}>
+      <h2 style={styles.headline}>Tab Two Template Example</h2>
+      <p>
+        This is another example of a tab template!
+      </p>
+      <p>
+        Fair warning - the next tab routes to home!
+      </p>
+    </Card>
+    </div>
+  </Tab>
+  <Tab
+    label="Home (non-content example)"
+    route="/home"
+    onActive={this._handleTabActive} />
+</Tabs>
