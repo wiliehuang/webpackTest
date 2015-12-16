@@ -9,6 +9,8 @@ import BarChart1 from 'react-d3/barchart/BarChart';
 import Tab from './Tabs.jsx';
 import TableContainer from './TableContainer.jsx';
 
+import {RouteHandler} from 'react-router';
+
 
 class App extends React.Component {
   constructor(){
@@ -19,6 +21,7 @@ class App extends React.Component {
   render(){
     return(
       <div>
+  
         <Tab />
       </div>
 
