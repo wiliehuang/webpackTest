@@ -13,6 +13,10 @@ import TableContainer from './TableContainer.jsx';
 import Grid from './Grid.jsx';
 import Checkbox from 'material-ui/lib/checkbox';
 import DataPreview from './TableData.jsx';
+import RaisedButton from 'material-ui/lib/raised-button';
+import CardText from 'material-ui/lib/card/card-text';
+import CardActions from 'material-ui/lib/card/card-actions';
+import {Link} from 'react-router';
 
 export default class TabsPage extends React.Component {
 
@@ -81,7 +85,7 @@ export default class TabsPage extends React.Component {
           <Tabs onChange={this._handleChangeTabs.bind(this)} value={this.state.slideIndex + ''}>
             <Tab label="Flash Update" value="1" />
             <Tab label="Stats" value="0" />
-            <Tab label="Analysis" value="2" />
+            <Tab label="About" value="2" />
           </Tabs>
 
           <SwipeableViews index={this.state.slideIndex} onChangeIndex={this._handleChangeIndex.bind(this)}>
@@ -122,7 +126,20 @@ export default class TabsPage extends React.Component {
 
             </div>
             <div style={styles.slide}>
-              AX
+              <Card>
+                <CardText>
+                  The CFL data provided are used to display corresponding events for a specific game.
+                  The related GIF serve as a source for event promotion and potential future monetization.
+                  For further information regarding this technology, click the about button below.
+                </CardText>
+                <CardActions>
+                  <Link to="about">
+                    <RaisedButton label="About" primary={true} />
+                  </Link>
+              </CardActions>
+
+              </Card>
+
             </div>
           </SwipeableViews>
     </div>
